@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>ćwiczenie 1</title>
+  </head>
+  <body>
+    <dir id="wynik"></dir>
+      
+    <script>
+        haslo();
+        function haslo(){
+            var password = "Zadanko1";
+            var sprawdz = prompt("Podaj hasło:");
+            if(password == sprawdz){
+                document.getElementById("wynik").innerHTML = "<h3>Hasło prawidłowe</h3>";
+            }else{
+                 document.getElementById("wynik").innerHTML = "<h3>Hasło nieprawidłowe</h3>";
+            }
+        }
+    </script>
+  </body>
+</html>

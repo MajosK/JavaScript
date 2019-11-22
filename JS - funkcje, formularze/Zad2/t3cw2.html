@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>ćwiczenie 2</title>
+  </head>
+  <body>
+    <dir id="wynik"></dir>
+      
+    <script>
+        ocena();
+        function ocena(){
+            var stopien = prompt("Podaj swoją ocenę:");
+            if(stopien == 1 || stopien == 2){
+                document.getElementById("wynik").innerHTML = "Sporo pracy przed Tobą";
+            }else if(stopien == 3){
+                document.getElementById("wynik").innerHTML = "Jeszcze trochę, a będzie okej";
+            }else{
+                 document.getElementById("wynik").innerHTML = "Okej";
+            }
+        }
+    </script>
+  </body>
+</html>

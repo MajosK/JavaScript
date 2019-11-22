@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        
+    </head>
+    <body>
+        <form>
+            Podstawa a:<input type="text" name="podstawaa"><br>
+            Podstawa b:<input type="text" name="podstawab"><br>
+            Wysokość:<input type="text" name="wysokosc"><br>
+            <input type=submit value="Policz"><br><br>
+        </form>
+        
+            Pole  = <div id="wynik"></div>
+        <script>
+            var A = document.getElementByName('podstawaa').value();
+            var B = document.getElementByName('podstawab').value();
+            var w = document.getElementByName('wysokosc').value();
+            var pole = (A+B)*w/2;
+            document.getElementById("wynik").innerHTML = pole;
+        </script>
+    </body>
+</html>

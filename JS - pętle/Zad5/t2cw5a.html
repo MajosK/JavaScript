@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>ćwiczenie 4</title>
+  </head>
+  <body>
+    <dir id="licz"></dir>
+      
+    <script>
+        var figura = prompt("Wybierz figurę:  \n prostokąt, \n kwadrat, \n koło, \n trapez");
+        if(figura == "prostokąt"){
+            var a = prompt("Podaj szerokość:");
+            var b = prompt("Podaj wysokość:");
+            var w = a*b;
+            document.getElementById("licz").innerHTML = "Szerokość = "+a+"<br>"+"Wysokość = "+b+"<br>"+"Pole = "+w;
+        }else if(figura == "kwadrat"){
+            var a = prompt("Podaj szerokość:");
+            var w = a*a;
+            document.getElementById("licz").innerHTML = "Długość = "+a+"<br>"+"Pole = "+w;
+        }else if(figura == "koło"){
+            var r = prompt("Podaj długość ramienia:");
+            var w = 3.14 * r * r;
+            document.getElementById("licz").innerHTML = "Ramię = "+r+"<br>"+"Pole = "+w;
+        }else if(figura == "trapez"){
+            var a = prompt("Podaj 1 podstawę:");
+            var b = prompt("Podaj 2 podstawę:");
+            var h = prompt("Podaj wysokość:");
+            var w = (a+b)*h/2;
+            document.getElementById("licz").innerHTML = "1 podstawa = "+a+"2 podstawa = "+b+"<br>"+"Wysokość = "+h+"<br>"+"Pole = "+w;
+        }else{
+            document.getElementById("licz").innerHTML = "Nie podano figury";
+        }
+    </script>
+  </body>
+</html>
+

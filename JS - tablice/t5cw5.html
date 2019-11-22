@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="lista"></div>
+
+    <script type="text/javascript">
+      var lista = [];
+        var suma = 0;
+        
+        
+        for(var i = 0; i< 5; i++){
+            lista[i] = prompt("Podaj "+(i+1)+" liczbę: ");
+            suma = suma+parseInt(lista[i]);
+        }
+        
+        document.getElementById("lista").innerHTML += "Suma: "+suma;
+        
+    </script>
+  </body>
+</html>

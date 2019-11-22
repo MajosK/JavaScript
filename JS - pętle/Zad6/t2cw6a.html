@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="pole"></div>
+    
+    <script>
+      var liczba = prompt("Podaj liczbe");
+        
+      if(liczba%6 == 0){
+          alert("Podałeś liczbę podzielną przez 6");
+      }
+      else if(liczba%6 == 1){
+          alert("Podałeś liczbę niepodzielną przez 6");
+      }
+      else if(isNaN(liczba)){
+      alert("Podałeś tekst, wprowadź liczbę");}
+    </script>
+  </body>
+</html>

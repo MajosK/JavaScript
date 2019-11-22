@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="lista">
+        <ol id="position">
+        </ol>
+      
+      </div>
+
+    <script type="text/javascript">
+      var lista = [];
+      var i = 0;
+    
+      lista[i] = prompt("Dodaj pierwszy produkt do listy: ");
+        
+    var sprawdz = prompt("Chcesz dodać kolejny produkt do listy?");
+    nowe(sprawdz);
+    
+    function nowe(sprawdz){
+    if(sprawdz == "tak"){
+         i++;
+       lista[i] = prompt("Dodaj produkt do listy: ");
+    }
+        var sprawdz = prompt("Chcesz dodać kolejny produkt do listy?");
+        if(sprawdz == "tak"){
+            nowe(sprawdz);
+        }
+    }
+    
+        for(var j=0; j<lista.length; j++){
+        document.getElementById("position").innerHTML += "<li>"+lista[j]+"</li>";
+        }
+        
+    </script>
+  </body>

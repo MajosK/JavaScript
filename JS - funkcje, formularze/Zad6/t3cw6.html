@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>ćwiczenie 5</title>
+    <style>
+        body{
+            background-color: blue;
+            color: white;
+        }
+        #polatext{
+            margin-bottom: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <form action=" " name="forek">
+        <fieldset>
+            <legend>Kalkulator</legend>
+            <div id="polatext">
+                Litera a:<input type="text" id="cyfraa">
+                Litera b:<input type="text" id="cyfrab">
+            </div>
+            <select name="wybor">
+                <option>Suma</option>               
+                <option>Różnica</option>
+                <option>Iloraz</option>
+                <option>Iloczyn</option>
+            </select>
+            <input type="button" value="Oblicz" onclick="sprawdz()">
+            <br>
+            
+            <br>
+            Wynik:<output id="koment" type="text"></output>
+        </fieldset>  
+    </form>
+      
+    <script>
+        function sprawdz(){
+            var rodzaj = document.forek.wybor.value;
+            if(rodzaj == "Suma"){
+                    var a = parseInt(document.getElementById("cyfraa").value);
+                    var b = parseInt(document.getElementById("cyfrab").value);
+                    document.getElementById("koment").value = a+b;
+            }else if(rodzaj == "Różnica"){
+                    var a = parseInt(document.getElementById("cyfraa").value);
+                    var b = parseInt(document.getElementById("cyfrab").value);
+                    document.getElementById("koment").value = a-b;
+            }else if(rodzaj == "Iloczyn"){
+                    var a = parseInt(document.getElementById("cyfraa").value);
+                    var b = parseInt(document.getElementById("cyfrab").value);
+                    document.getElementById("koment").value = a/b;
+            }else if(rodzaj == "Iloraz"){
+                    var a = parseInt(document.getElementById("cyfraa").value);
+                    var b = parseInt(document.getElementById("cyfrab").value);
+                    document.getElementById("koment").value = a*b;
+            }
+        }
+    </script>
+  </body>
+</html>

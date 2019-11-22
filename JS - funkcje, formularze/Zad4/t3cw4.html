@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>ćwiczenie 4</title>
+    <style>
+        body{
+            background-color: blue;
+            color: white;
+        }  
+    </style>
+  </head>
+  <body>
+    <form action=" ">
+        <fieldset>
+            <legend>Płeć</legend>
+            Czerwony<input type="checkbox" value="czerwony" name="kolor">
+            Zielony<input type="checkbox" value="zielony" name="kolor">
+            Niebieski<input type="checkbox" value="niebieski" name="kolor">
+            <input type="button" onclick="kom();" value="Sprawdź">
+            Komunikat:<input id="koment" type="text">
+        </fieldset>  
+    </form>
+      
+    <script>
+        kom();
+        var checkbox = document.querySelectorAll("input[type='checkbox']");
+        var i = 0;
+        var tab = "";
+        function kom(){
+            for(i; i<3; i++){
+                if(checkbox[i].checked){
+                     tab += checkbox[i].value+", ";
+                }else{
+                    document.getElementById("koment").value = "Nic nie zaznaczono";
+                }
+            }
+            document.getElementById("koment").value = tab;
+        }
+    </script>
+  </body>
+</html>

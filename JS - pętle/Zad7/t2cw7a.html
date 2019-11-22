@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <style>
+      table{
+        border:5px dashed black;
+      }
+      table td{
+        border:3px double blue;
+      }
+    </style>
+    <meta charset="utf-8">
+  </head>
+  <body>
+      <table>
+        <tr id="pole">
+        </tr>
+      </table>
+    <script>
+      for(var i=49;i>10;i--){
+        if(i%4==3){ document.getElementById("pole").innerHTML+="<td>" + i + "</td>"}
+      }
+    </script>
+  </body>
+</html>

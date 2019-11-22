@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="dane"></div>
+
+    <script type="text/javascript">
+        
+      function ludz(imie,nazwisko, wiek, wzrost, data_urodzenia, klasa){
+          this.imie = imie;
+          this.nazwisko = nazwisko;
+          this.wiek = wiek;
+          this.wzrost = wzrost;
+          this.data_urodzenia = data_urodzenia;
+          this.klasa = klasa;
+      }
+        
+        ludz.imie = prompt("Dodaj swoje imię: ");
+        ludz.nazwisko = prompt("Dodaj swoje nazwisko: ");
+        ludz.wiek = prompt("Dodaj swój wiek: ");
+        ludz.wzrost = prompt("Dodaj swój wzrost: ");
+        ludz.data_urodzenia = prompt("Dodaj swoją datę urodzenia: ");
+        ludz.klasa = prompt("Dodaj swoją klasę: ");
+        
+        for(i in ludz){
+        document.getElementById("dane").innerHTML += ludz[i]+" ";
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>ćwiczenie 5</title>
+    <style>
+        body{
+            background-color: blue;
+            color: white;
+        }
+        #polatext{
+            margin-bottom: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <form action=" ">
+        <fieldset>
+            <legend>Kalkulator</legend>
+            <div id="polatext">
+                Litera a:<input type="text" id="cyfraa">
+                Litera b:<input type="text" id="cyfrab">
+            </div>
+            <input type="button" onclick="dodaj();" value="Suma">
+            <input type="button" onclick="usun();" value="Różnica">
+            <input type="button" onclick="dzial();" value="Iloraz">
+            <input type="button" onclick="mnoz();" value="Iloczyn">
+            <br>
+            <br>
+            Wynik:<output id="koment" type="text"></output>
+        </fieldset>  
+    </form>
+      
+    <script>
+        function dodaj(){
+            var a = parseInt(document.getElementById("cyfraa").value);
+            var b = parseInt(document.getElementById("cyfrab").value);
+            document.getElementById("koment").value = a+b;
+        }
+        function usun(){
+            var a = parseInt(document.getElementById("cyfraa").value);
+            var b = parseInt(document.getElementById("cyfrab").value);
+            document.getElementById("koment").value = a-b;
+        }
+        function mnoz(){
+            var a = parseInt(document.getElementById("cyfraa").value);
+            var b = parseInt(document.getElementById("cyfrab").value);
+            document.getElementById("koment").value = a*b;
+        }
+        function dzial(){
+            var a = parseInt(document.getElementById("cyfraa").value);
+            var b = parseInt(document.getElementById("cyfrab").value);
+            document.getElementById("koment").value = a/b;
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="dane"></div>
+
+    <script type="text/javascript">
+        
+    function ludz(imie,nazwisko, wiek, wzrost, data_urodzenia, klasa){
+          this.imie = imie;
+          this.nazwisko = nazwisko;
+          this.wiek = wiek;
+          this.data_urodzenia = data_urodzenia;
+          this.klasa = klasa;
+    }
+        
+    function add(){
+        var temp = new ludz();
+        temp.imie = prompt("Dodaj imię "+(i+1)+ " osoby: ");
+        temp.nazwisko = prompt("Dodaj nazwisko "+(i+1)+ " osoby: ");
+        //ludz.wiek = prompt("Dodaj wiek "+(i+1)+ " osoby: ");
+        //ludz.wzrost = prompt("Dodaj wzrost "+(i+1)+ " osoby: ");
+        //ludz.data_urodzenia = prompt("Dodaj datę urodzenia "+(i+1)+ " osoby: ");
+        //ludz.klasa = prompt("Dodaj klasę "+(i+1)+ " osoby: ");
+        return temp;
+    }
+        
+        var ile =  prompt("Ile osób będziesz wpisywać?: ");
+        var uczniowie = [];
+        
+        for(var i=0; i<ile; i++){
+            uczniowie[i] = add();
+        }
+        
+        for(i in uczniowie){
+            console.log(uczniowie[i]);
+        }
+        
+    </script>
+  </body>
+</html>

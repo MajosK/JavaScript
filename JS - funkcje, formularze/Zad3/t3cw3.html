@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>ćwiczenie 3</title>
+    <style>
+        body{
+            background-color: blue;
+            color: white;
+        }  
+    </style>
+  </head>
+  <body>
+    <form action=" ">
+        <fieldset>
+            <legend>Płeć</legend>
+            Kobieta<input type="radio" value="kobieta" name="plec">
+            Mężczyzna<input type="radio" value="mężczyzna" name="plec">
+            <input type="button" onclick="kom();" value="Sprawdź">
+            Komunikat:<input id="koment" type="text">
+        </fieldset>  
+    </form>
+      
+    <script>
+        kom();
+        var radio = document.querySelectorAll("input[type='radio']");
+        var i = 0;
+        function kom(){
+            for(i; i<2; i++){
+                if(radio[i].checked){
+                     document.getElementById("koment").value = radio[i].value;
+                }
+            }
+        }
+    </script>
+  </body>
+</html>

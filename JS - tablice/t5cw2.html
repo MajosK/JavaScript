@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="zadanie"></p>
+
+    <script type="text/javascript">
+      var lista = []
+      var i = 2;
+      
+      for(var j=0; j<2; j++){
+          lista[j] = prompt("Podaj markę samochodów, które lubisz: ");
+      }
+        for(var j=0; j<2; j++){
+          lista[i] = prompt("Podaj markę samochodów, których nie lubisz: ");
+        i++;
+      }
+        
+    document.getElementById("zadanie").innerHTML = "Lubię samochody marki "+lista[0]+" i "+lista[1]+", nie lubię "+lista[2]+" i "+lista[3]+".";
+        
+    lista.unshift("Tesla");
+    lista.push("Citroen");
+    console.log(lista);
+    </script>
+  </body>
+</html>

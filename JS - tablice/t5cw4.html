@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="lista"></div>
+
+    <script type="text/javascript">
+      var lista = [];
+        
+        var ile =  prompt("Ile liczb będziesz podawać?: ");
+        for(var i = 0; i< ile; i++){
+            lista[i] = prompt("Podaj liczbę: ");
+        }
+        
+        lista.reverse();
+      
+        for(i in lista){
+        document.getElementById("lista").innerHTML += lista[i]+" ";
+        }
+    </script>
+  </body>
+</html>

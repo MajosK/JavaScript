@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>ćwiczenie 4</title>
+  </head>
+  <body>
+    <dir id="gdzie"></dir>
+
+    <script>
+      var ile = prompt("Ile masz pieniędzy?: ");
+      if(ile >= 100){
+      document.getElementById("gdzie").innerHTML = "Możesz iść na kolację i do kina";
+    }else if(ile >= 50 && ile < 100){
+      document.getElementBId("gdzie").innerHTML = "Możesz iść na dobrą kolację";
+    }else if(ile >= 25 && ile < 50){
+      document.getElementById("gdzie").innerHTML = "Możesz iść do kina";
+    }else{
+      document.getElementById("gdzie").innerHTML = "Spędzisz wieczór przed telewizorem";
+    }
+    </script>
+  </body>
+</html>
